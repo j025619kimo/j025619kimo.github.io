@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<style>
+* { margin: 0; padding: 0;}
+.dowebok { position: relative; width: 220px; height: 337px; margin: 0 auto;cursor: pointer;}
+.dowebok img { position: absolute; left: 0; top: 0;}
+#robot { z-index: 1;}
+#redux { position: absolute; left: 0; top: 0; z-index: 2;}
+#progress { position: absolute; right: 10px; top: 10px; z-index: 3; color: #fff;}
+.vad {
+	width: 500px;
+	margin: 50px auto;
+	text-align: center;
+}
+.vad a {display: inline-block;padding: 2px 5px;margin: 0 5px;}
+</style>
+<body>
+
+<a href="https://codepen.io/michaelyenoke/pen/MrWNaz">https://codepen.io/michaelyenoke/pen/MrWNaz</a>
+<a href="http://www.dowebok.com/140.html">http://www.dowebok.com/140.html</a>
+
+
+<div class="dowebok">
+	<img id="ori" src="img/mario.jpg" alt="">
+	<img id="redux" src="img/cover.jpg" alt="">
+	<!-- <span id="progress">0%</span> -->
+</div>
+<p class="vad"><a class="reset" href="javascript:">重 置</a> <a class="clear" href="javascript:">清 除</a></p>
+
+</body>
+</html>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootbox.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/wow.min.js"></script>
+<script>new WOW().init();</script>
+<script src="js/jquery.eraser-0.5.1.js"></script>
+<script>
+$(function(){
+	$('#redux').eraser({
+		progressFunction: function(p){
+			$('#progress').html(Math.round(p*100) + '%');
+		}
+	});
+
+	$('.reset').on('click', function(){
+		$('#redux').eraser('reset');
+		$('#progress').html('0%');
+	});
+
+	$('.clear').on('click', function(){
+		$('#redux').eraser('clear');
+		$('#progress').html('100%');
+	});
+});
+</script>
