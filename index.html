@@ -16,16 +16,69 @@
 </head>
 <body>
 
-<section class="section1"></section>
-
-<section class="section2">
-	<div class="stickyWrapper">
-		<div class="container">66</div>
+<section class="sectionKv">
+	<div class="kvSlider">
+		<div class="slick-item"><img src="https://picsum.photos/seed/picsum/1920/800"></div>
+		<div class="slick-item"><img src="https://picsum.photos/id/11/1920/800"></div>
 	</div>
 </section>
 
-<section class="section3"></section>
-<section class="section4"></section>
+<section class="section2">
+	<div class="stickyWrapper">
+		<div class="container">
+			這邊就寫一些資訊
+		</div>
+	</div>
+</section>
+
+<section class="sectionMiddle">
+	<div class="textEffect">
+		<p class="effect1">宴客時間地點</p>
+		<p class="effect2">在最下面</p>
+		<p class="effect3">記得滑到最後</p>
+		<p class="effect4" data-text="點擊按鈕">點擊按鈕</p>
+	</div>
+</section>
+
+
+<section class="sectionComic">
+	<div class="stickyWrapper" style="--lt-sticky-top: 0em;--color-sticky-bg: #7a76fa;">
+		<div class="container">
+			<p>564646</p>
+			<img src="https://picsum.photos/id/237/200/300" class="ppscroll" data-direction="top" data-duration="200">
+		</div>
+	</div>
+	<div class="stickyWrapper" style="--lt-sticky-top: 1.5em;--color-sticky-bg: #6be4ec">
+		<div class="container">2564632</div>
+	</div>
+	<div class="stickyWrapper" style="--lt-sticky-top: 3em;--color-sticky-bg: #f78a8a;">
+		<div class="container">354465146</div>
+	</div>
+</section>
+
+<section class="sectionComicEnd" id="sCe">
+	<div class="stickyWrapper">
+		<div class="container">
+			<div class="comicEndTitle">
+				<div class="comicEndText">一</div>
+				<div class="comicEndText">些</div>
+				<div class="comicEndText">文</div>
+				<div class="comicEndText">字</div>
+			</div>
+			<div class="comicEndPic" id="comicEndPic"><img src="https://picsum.photos/id/56/300/400"></div>
+		</div>
+	</div>
+</section>
+
+<section class="sectionAround" id="sAro">
+	<div class="aroundWrapper">
+		<div class="aroundMid"></div>
+		<div id="iphone1"></div>
+		<div id="iphone2"></div>
+		<div id="iphone3"></div>
+		<div id="iphone4"></div>
+	</div>
+</section>
 
 <section class="sectionEnvelope" id="sEnv">
 	<div class="stickyWrapper">
@@ -68,6 +121,8 @@
 	</div>
 </div>
 
+<div id="goTop"></div>
+
 </body>
 </html>
 
@@ -77,13 +132,3 @@
 <script src="js/SmoothScroll.js"></script>
 <script>SmoothScroll({ keyboardSupport: false })</script>
 <script src="js/main.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-
-	$('#openEnvelope').on('click',function(){
-		$('#envelopeModal').modal('show');
-		return false;
-	});
-
-});
-</script>
