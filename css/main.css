@@ -33,8 +33,14 @@ section {
     position: relative;
 }
 
-.kvSlider {
-
+.kvSlider img,.kvSlider_mb img {
+	max-width: 100%;
+	height: auto;
+}
+.kvSlider {display: none;}
+@media screen and (min-width: 992px) {
+	.kvSlider {display: block;}
+	.kvSlider_mb {display: none;}
 }
 
 .section2 {
