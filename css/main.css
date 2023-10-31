@@ -1,0 +1,112 @@
+body {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+.stickyWrapper {
+    width: 100%;
+    position: sticky;
+    min-height: var(--lt-content-min-height);
+    top: var(--lt-sticky-top);
+}
+.stickyWrapper .container {
+	height: 100vh;
+}
+section {
+    min-height: 400px;
+    position: relative;
+}
+
+.section2 {
+	min-height: 400vh;
+    margin-bottom: -100vh;
+    --lt-content-min-height: 100vh;
+    --lt-sticky-top: 0;
+}
+
+.sectionEnvelope {
+	height: 350vh;
+	--lt-content-min-height: 100vh;
+    --lt-sticky-top: 0;
+}
+.envelopeWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+    height: 100vh;
+    background: url(../img/envelope/envelopeBG.jpg) center/80px 80px;
+    position: relative;
+    overflow: hidden;
+}
+.envelopePuzzpleBox {
+	width: 100%;
+	max-width: 600px;
+	aspect-ratio: 600/480;
+	position: relative;
+}
+.envelopePuzzple {
+	width: 33%;
+	aspect-ratio: 200/160;
+	background: center/cover no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+/* 33% 除以200/160 = 26.4% */
+.envelopePuzzple#puzzple1 {background-image: url(../img/envelope/puzzle1.jpg);margin-top: -26.4%;margin-left: -33%;}
+.envelopePuzzple#puzzple2 {background-image: url(../img/envelope/puzzle2.jpg);margin-top: -26.4%;}
+.envelopePuzzple#puzzple3 {background-image: url(../img/envelope/puzzle3.jpg);margin-top: -26.4%;margin-left: 33%;}
+.envelopePuzzple#puzzple4 {background-image: url(../img/envelope/puzzle4.jpg);margin-left: -33%;}
+.envelopePuzzple#puzzple5 {background-image: url(../img/envelope/puzzle5.jpg);}
+.envelopePuzzple#puzzple6 {background-image: url(../img/envelope/puzzle6.jpg);margin-left: 33%;}
+.envelopePuzzple#puzzple7 {background-image: url(../img/envelope/puzzle7.jpg);margin-top: 26.4%;margin-left: -33%;}
+.envelopePuzzple#puzzple8 {background-image: url(../img/envelope/puzzle8.jpg);margin-top: 26.4%;}
+.envelopePuzzple#puzzple9 {background-image: url(../img/envelope/puzzle9.jpg);margin-top: 26.4%;margin-left: 33%;}
+.envelopeComplete {
+	width: 100%;
+	aspect-ratio: 600/480;
+	background: url(../img/envelope/envelope.jpg) center/cover no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.envelopeBtn {
+	display: inline-block;
+	font-size: 20px;
+	padding: 5px 20px;
+	text-decoration: none!important;
+	text-align: center;
+	color: #fff;
+	background-color: #e86581;
+	border-radius: 50px;
+	animation: glowing 1300ms infinite;
+	transition: .3s;
+	position: absolute;
+	top: 54%;
+	left: 34%;
+	transform: translateY(100px);
+	opacity: 0;
+}
+.envelopeBtn.active {
+	transform: translateY(0px);
+	opacity: 1;
+}
+@media screen and (min-width: 992px) {
+	.envelopeBtn {top: 58%;left: 45%;}
+}
+.envelopeBtn:hover {color: #fff;}
+@keyframes glowing {
+    0% {
+      background-color: #b21537;
+      box-shadow: 0 0 5px #b21537;
+    }
+    50% {
+      background-color: #e86581;
+      box-shadow: 0 0 20px #e86581;
+    }
+    100% {
+      background-color: #b21537;
+      box-shadow: 0 0 5px #b21537;
+    }
+}
