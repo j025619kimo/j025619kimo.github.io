@@ -31,7 +31,7 @@
 	<div class="stickyWrapper">
 		<div class="container">
 			這邊就寫一些資訊
-			<a href="https://www.aluxe.com/">圖片可參考</a>
+			<a href="https://www.aluxe.com/" target="_blank">圖片可參考</a>
 		</div>
 	</div>
 </section>
@@ -118,9 +118,19 @@
 		        </div>
 		    </div>
 		    <div class="modal-body">
-		        <div class="videoBox">
-		        	<div id="myYoutube"></div>
-		        </div>
+		    	<form class="theForm" id="theForm" action="" method="POST">		    		
+			    	<div class="form-group">
+			        	<label for="guest_name">姓名</label>
+			        	<input type="text" name="guest_name" id="guest_name" class="form-control">
+			    	</div>
+			    	<div class="form-group">
+			        	<label for="guest_message">留言</label>
+			        	<textarea name="guest_message" id="guest_message" class="form-control"></textarea>
+			    	</div>
+			    	<div class="form-group">
+			    		<a href="" id="form_submit">送出</a>
+			    	</div>
+		    	</form>
 		    </div>
 		</div>
 	</div>
