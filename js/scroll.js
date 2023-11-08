@@ -67,7 +67,7 @@ var scene_sEnv_btn = new ScrollMagic
                     triggerElement: "#sEnv",
                     triggerHook: "onEnter",
                     duration: 0, 
-                    offset: "2500%"
+                    offset: "2100%"
                 })
                 .setClassToggle('.envelopeBtn','active')
                 .addTo(controller);
