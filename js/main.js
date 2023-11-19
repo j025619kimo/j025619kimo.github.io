@@ -30,16 +30,6 @@ $('.kvSlider').slick({
     fade: true,
     cssEase: 'linear'
 });
-$('.kvSlider_mb').slick({
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
-});
 
 
 $(document).ready(function(){

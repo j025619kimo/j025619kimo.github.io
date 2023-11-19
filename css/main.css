@@ -1,5 +1,6 @@
 body {
 	font-family: 'Noto Sans TC', sans-serif;
+	background-color: #fdeceb;
 }
 .loaderWrapper{
 	display: flex;
@@ -63,15 +64,39 @@ section {
     min-height: 200px;
     position: relative;
 }
+.sectionKv {
+	padding: 50px;
+	position: relative;
+}
+.kvWrapper {
+	display: flex;
+}
+.kvLeft {
+	width: 60%;
+	aspect-ratio: 800/700;
+	background-color: rgb(86,119,130,1);
+}
+.kvRight {
+	width: 40%;
+}
 
-.kvSlider img,.kvSlider_mb img {
+.kvLeft img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.kvSlider img,.kvSlider_mb img,.kvRight img {
 	max-width: 100%;
 	height: auto;
 }
-.kvSlider {display: none;}
+.kvSliderWrapper {
+	width: 25%;
+	position: absolute;
+	top: 20%;
+	right: 30%;
+}
 @media screen and (min-width: 992px) {
-	.kvSlider {display: block;}
-	.kvSlider_mb {display: none;}
+	
 }
 
 .section2 {
@@ -79,6 +104,64 @@ section {
     margin-bottom: -100vh;
     --lt-content-min-height: 100vh;
     --lt-sticky-top: 0;
+}
+.section2 .stickyWrapper {
+	margin-bottom: -100vh;
+}
+.bracket {
+	clip-path: polygon(0% 0%, 0% 100%, 1.25rem 100%, 1.25rem 1.25rem, 100% 1.25rem, 100% calc(100% - 1.25rem), 1.25rem calc(100% - 1.25rem), 1.25rem 100%, 100% 100%, 100% 0%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3.125rem;
+    height: 93.75vh;
+    background: linear-gradient(91deg, #dbff00, #95c9fd, #cdabfb);
+    background-size: 800% 800%;
+    -webkit-animation: bgAnimate 10000ms ease-in infinite;
+    -moz-animation: bgAnimate 10000ms ease-in infinite;
+    animation: bgAnimate 10000ms ease-in infinite;
+}
+.bracket.bracket--left {
+	left: 6.875rem;
+}
+.bracket.bracket--right {
+	right: 6.875rem;
+    transform: translateY(-50%) scale(-1);
+}
+@keyframes bgAnimate {
+	0% {
+		background-position: 0% 48%;
+	}
+	50% {
+		background-position: 100% 53%;
+	}
+	100% {
+		background-position: 0% 48%;
+	}
+}
+.inviteIntro h2 {
+	text-align: center;
+}
+.inviteIntro p {
+	text-align: center;
+}
+.inviteIntroContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3vw;
+}
+.inviteIntroContent.reverse {flex-direction: row-reverse;}
+.introFigure {
+	width: 40%;
+}
+.introText {
+	width: 60%;
+	text-align: justify;
+}
+.introFigure img {
+	max-width: 100%;
+	height: auto;
 }
 
 .sectionMiddle {
@@ -271,7 +354,7 @@ section {
 .aroundMid {
 	width: 250px;
 	height: 250px;
-	background-color: #fa0;
+	background-image: url(../img/around/rings.jpg);
 	position: absolute;
 	top: 42%;
 	left: 50%;
