@@ -65,43 +65,64 @@ section {
     position: relative;
 }
 .sectionKv {
-	padding: 50px;
+	height: 100vh;
+	padding: 10px;
 	position: relative;
+	margin-bottom: 50px;
 }
 .kvWrapper {
 	display: flex;
+	width: 100%;
+	height: 100%;
 }
 .kvLeft {
+	display: none;
 	width: 60%;
 	aspect-ratio: 800/700;
 	background-color: rgb(86,119,130,1);
 }
 .kvRight {
-	width: 40%;
+	width: 100%;
+	aspect-ratio: 800/1067;
 }
 
-.kvLeft img {
+.kvLeft img,.kvRight img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-.kvSlider img,.kvSlider_mb img,.kvRight img {
+.kvSlider img {
 	max-width: 100%;
 	height: auto;
 }
 .kvSliderWrapper {
-	width: 25%;
+	width: 60%;
 	position: absolute;
-	top: 20%;
-	right: 30%;
+	top: 5%;
+	right: 10%;
 }
 @media screen and (min-width: 992px) {
-	
+	.sectionKv {
+		height: auto;
+		padding: 50px;
+	}
+	.kvWrapper {width: auto;height: auto;}
+	.kvLeft {
+		display: block;
+	}
+	.kvRight {
+		width: 40%;
+	}
+	.kvSliderWrapper {
+		width: 25%;
+		top: 20%;
+		right: 30%;
+	}
 }
 
 .section2 {
-	min-height: 400vh;
-    margin-bottom: -100vh;
+	min-height: 100vh;
+	padding-bottom: 100px;
     --lt-content-min-height: 100vh;
     --lt-sticky-top: 0;
 }
@@ -114,7 +135,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     width: 3.125rem;
-    height: 93.75vh;
+    height: 80vh;
     background: linear-gradient(91deg, #dbff00, #95c9fd, #cdabfb);
     background-size: 800% 800%;
     -webkit-animation: bgAnimate 10000ms ease-in infinite;
@@ -122,11 +143,19 @@ section {
     animation: bgAnimate 10000ms ease-in infinite;
 }
 .bracket.bracket--left {
-	left: 6.875rem;
+	left: 10px;
 }
 .bracket.bracket--right {
-	right: 6.875rem;
+	right: 10px;
     transform: translateY(-50%) scale(-1);
+}
+@media screen and (min-width: 992px) {
+	.bracket.bracket--left {
+		left: 6.875rem;
+	}
+	.bracket.bracket--right {
+		right: 6.875rem;
+	}
 }
 @keyframes bgAnimate {
 	0% {
@@ -139,6 +168,9 @@ section {
 		background-position: 0% 48%;
 	}
 }
+.inviteIntro {
+	padding: 0 20px;
+}
 .inviteIntro h2 {
 	text-align: center;
 }
@@ -150,18 +182,24 @@ section {
 	align-items: center;
 	justify-content: center;
 	gap: 3vw;
+	padding-top: 120px;
 }
 .inviteIntroContent.reverse {flex-direction: row-reverse;}
 .introFigure {
-	width: 40%;
+	width: 60%;
 }
 .introText {
-	width: 60%;
+	width: 40%;
 	text-align: justify;
 }
 .introFigure img {
 	max-width: 100%;
 	height: auto;
+}
+@media screen and (min-width: 992px) {
+	.inviteIntro {padding: 0;}
+	.introFigure {width: 40%;}
+	.introText {width: 60%;}
 }
 
 .sectionMiddle {
@@ -299,36 +337,6 @@ section {
 	background-color: var(--color-sticky-bg);
 }
 
-/* sCe */
-.sectionComicEnd {
-    background: linear-gradient(180deg, #C6AEED, #f5f5f7 70%);
-    min-height: 400vh;
-    margin-bottom: -100vh;
-    --lt-content-min-height: 100vh;
-    --lt-sticky-top: 0;
-}
-.comicEndTitle {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	position: absolute;
-	top: 20%;
-}
-.comicEndText {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 1.5em;
-	height: 1.5em;
-	font-size: 40px;
-}
-.comicEndPic {
-	width: 300px;
-	position: absolute;
-	bottom: 0%;
-	left: 50%;
-	transform: translate(-50%,0%);
-}
 
 /* sAro */
 .sectionAround {
@@ -352,65 +360,81 @@ section {
 	left: 0;
 }
 .aroundMid {
-	width: 250px;
-	height: 250px;
+	width: 200px;
+	aspect-ratio: 1;
 	background-image: url(../img/around/rings.jpg);
+	background-size: 100%;
 	position: absolute;
-	top: 42%;
-	left: 50%;
+	top: 48%;
+	left: 34%;
 	transform: translate(-50%,0);
 }
 .aroundWrapper #iphone1 {
-    width: 600px;
-    height: 557px;
+    width: 400px;
+	aspect-ratio: 600/557;
     background-image: url(../img/around/iphone1.png);
-    background-size: 600px 557px;
+    background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
     top: 6%;
-    left: 71%;
+    left: 135%;
     transform: translateX(-770px);
 }
 .aroundWrapper #iphone2 {
-    width: 850px;
-    height: 557px;
+    width: 570px;
+	aspect-ratio: 850/557;
     background-image: url(../img/around/iphone2.png);
-    background-size: 850px 557px;
+    background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: -23%;
-    right: 30%;
+    top: -15%;
+    right: 90%;
     transform: translateX(730px);
 }
 .aroundWrapper #iphone3 {
-    width: 850px;
-    height: 557px;
+    width: 570px;
+	aspect-ratio: 850/557;
     background-image: url(../img/around/iphone3.png);
-    background-size: 850px 557px;
+    background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 72%;
-    left: 30%;
+    top: 75%;
+    left: 140%;
     transform: translateX(-730px);
 }
 .aroundWrapper #iphone4 {
-    width: 600px;
-    height: 557px;
+    width: 400px;
+	aspect-ratio: 600/557;
     background-image: url(../img/around/iphone4.png);
-    background-size: 600px 557px;
+    background-size: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 46%;
-    right: 74%;
+    top: 30%;
+    right: 140%;
     transform: translateX(770px);
 }
 @media screen and (min-width: 992px) {
 	.sectionAround {height: 120vh;}
-	.aroundMid {top: 36%;left: 50%;}
-	.aroundWrapper #iphone1 {top: 6%;left: 50%;}
-	.aroundWrapper #iphone2 {top: -15%;right: 50%;}
-	.aroundWrapper #iphone3 {top: 60%;left: 50%;}
-	.aroundWrapper #iphone4 {top: 40%;right: 50%;}
+	.aroundMid {
+		width: 250px;
+		top: 36%;left: 50%;
+	}
+	.aroundWrapper #iphone1 {
+		width: 600px;
+		top: 6%;left: 50%;
+	}
+	.aroundWrapper #iphone2 {
+		width: 850px;
+		top: -15%;right: 50%;
+	}
+	.aroundWrapper #iphone3 {
+		width: 850px;
+		top: 60%;left: 50%;
+	}
+	.aroundWrapper #iphone4 {
+		width: 600px;
+		top: 40%;right: 50%;
+	}
 }
 
 /* sEnv */
