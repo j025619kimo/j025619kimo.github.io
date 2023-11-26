@@ -12,20 +12,29 @@ function getUrlParms(){ //取得網頁參數
     return args;
 }
 
-var theDate;
+var theDate,theMin;
 var args = new Object();
     args = getUrlParms();
     if (args["date"]!=undefined) {
         theDate = args["date"];
     }
+    if (args["minute"]!=undefined) {
+        theMin = args["minute"];
+    }
 console.log(theDate);
+console.log(theMin);
+$('#theDate').html(theDate);
+$('#theMin').html(theMin);
+if(theDate!=25) {
+    $('#note25').hide();
+}
 
 $('.kvSlider').slick({
     dots: false,
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     speed: 500,
     fade: true,
     cssEase: 'linear'
