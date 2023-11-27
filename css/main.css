@@ -2,6 +2,9 @@ body {
 	font-family: 'Noto Sans TC', sans-serif;
 	background-color: #fdeceb;
 }
+@media screen and (min-width: 992px) {
+	.mbBlock {display: none;}
+}
 .loaderWrapper{
 	display: flex;
 	align-items: center;
@@ -113,13 +116,33 @@ section {
 	right: 10%;
 }
 .kvMainText {
-	width: 60%;
+	width: 80%;
 	color: #fff;
 	padding: 20px 20px;
 	position: absolute;
-	top: calc( 50% - 50px );
-	left: 50px;
+	top: calc( 60% - 50px );
+	left: 20px;
 	transform: translateY(-50%);
+}
+.kvMainText h1 {
+	display: inline-block;
+	font-weight: bold;
+	color: #4a2339;
+	text-shadow: 0 0 5px rgba(255,255,255,1);
+	position: relative;
+}
+.kvMainText h1::before {
+	content: '';
+	width: 100%;
+	height: 60%;
+	background-color: rgba(241, 159, 91, 0.63);
+	position: absolute;
+	top: 23px;
+	left: -20px;
+	z-index: -1;
+}
+.kvMainText h1,.kvMainText h2 {
+	line-height: 1.5em;
 }
 @media screen and (min-width: 992px) {
 	.sectionKv {
@@ -140,6 +163,11 @@ section {
 		width: 25%;
 		top: 20%;
 		right: 30%;
+	}
+	.kvMainText {
+		width: 60%;
+		top: calc( 50% - 50px );
+		left: 8%;
 	}
 }
 
@@ -219,6 +247,9 @@ section {
 .introText {
 	width: 40%;
 	text-align: justify;
+}
+.inviteIntroContent.reverse .introText {
+	text-align: right;
 }
 .introFigure img {
 	max-width: 100%;
@@ -366,6 +397,47 @@ section {
 }
 .sectionComic .stickyWrapper {
 	background-size: cover;	
+}
+.comicTitle {
+	display: inline-block;
+	position: relative;
+	padding-left: 1.5em;
+}
+.comicTitle::before,.comicTitle::after {
+	content: '';
+	display: block;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	position: absolute;
+}
+.comicTitle::before {
+	width: 0.8em;
+	top: 0.1em;
+	left: -0.3em;
+	background-color: #eb56a9;
+}
+.comicTitle::after {
+	width: 1.3em;
+	top: 0.1em;
+	left: 0;
+	background-color: #b5304f;
+}
+.comicTitle span {
+	display: inline-block;
+	font-weight: bold;
+	position: relative;
+	z-index: 5;
+}
+.comicTitle span::before {
+	content: attr(data-number);
+	display: inline-block;
+	font-family: 'Ephesis', cursive;
+	font-weight: bold;
+	line-height: 1;
+	color: #fff;
+	position: absolute;
+	top: 0.5em;
+	left: -1.3em;
 }
 .comicFigure {
 	width: 100%;
