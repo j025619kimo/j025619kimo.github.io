@@ -37,9 +37,9 @@ body {
   }
 }
 #goTop {
-	width: 50px;
-	height: 50px;
-	background-color: #000;
+	width: 60px;
+	height: 74px;
+	background: url(../img/up.png) center/60px 74px no-repeat;
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
@@ -48,6 +48,7 @@ body {
 	opacity: 0;
 	cursor: pointer;
 }
+#goTop:hover {background-image: url(../img/up_hover.png);}
 #goTop.show {
 	transform: translateY(0px);
 	opacity: 1;
